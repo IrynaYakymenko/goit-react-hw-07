@@ -12,6 +12,7 @@ const ContactForm = () => {
 
   const dispatch = useDispatch();
   const handleSubmit = (values, options) => {
+    console.log(values);
     dispatch(
       addContact({
         name: values.name,

@@ -36,7 +36,7 @@ const ContactList = () => {
         })}
       </ul>
       {isLoading && <h2>Loading ....</h2>}
-      {isError && <h2>&{isError}</h2>}
+      {isError && <h2>Error</h2>}
     </div>
   );
 };
