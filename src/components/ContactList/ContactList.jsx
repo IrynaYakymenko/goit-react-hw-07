@@ -1,7 +1,13 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Contact from "./Contact";
-import { selectContacts } from "../../redux/contacts/selectors";
+import {
+  selectContacts,
+  selectIsError,
+  selectIsLoading,
+} from "../../redux/contacts/selectors";
 import { selectFilter } from "../../redux/filters/selectors";
+import { useEffect } from "react";
+import { fetchContacts } from "../../redux/contacts/operations";
 
 const ContactList = () => {
   const contacts = useSelector(selectContacts);
@@ -9,6 +15,15 @@ const ContactList = () => {
   const filteredContacts = contacts?.filter((contact) =>
     contact.name.toLowerCase().includes(filter.toLowerCase())
   );
+
+  const isLoading = useSelector(selectIsLoading);
+  const isError = useSelector(selectIsError);
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
+
   return (
     <div>
       <ul>
@@ -20,6 +35,8 @@ const ContactList = () => {
           );
         })}
       </ul>
+      {isLoading && <h2>Loading ....</h2>}
+      {isError && <h2>&{isError}</h2>}
     </div>
   );
 };
