@@ -2,10 +2,10 @@ import "./App.css";
 import ContactForm from "./components/ContactForm/ContactForm";
 import SearchBox from "./components/SearchBox/SearchBox";
 import ContactList from "./components/ContactList/ContactList";
-import { selectIsError, selectIsLoading } from "./redux/contacts/selectors";
+import { selectIsError, selectIsLoading } from "./redux/selectors";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { fetchContacts } from "./redux/contacts/operations";
+import { fetchContacts } from "./redux/operations";
 // import contacts from "./contacts.json";
 // import { useEffect, useState } from "react";
 
