@@ -1,6 +1,4 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { contactReduce } from "./contactsSlice";
-import { filterReduce } from "./filtersSlice";
 
 import {
   persistStore,
@@ -13,6 +11,8 @@ import {
   REGISTER,
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
+import { contactReduce } from "./contacts/contactsSlice";
+import { filterReduce } from "./filters/filtersSlice";
 
 const persistConfig = {
   key: "root",

@@ -4,7 +4,7 @@ import * as Yup from "yup";
 import InputMask from "react-input-mask";
 import { nanoid } from "@reduxjs/toolkit";
 import { useDispatch } from "react-redux";
-import { addContact } from "../../redux/contactsSlice";
+import { addContact } from "../../redux/contacts/contactsSlice";
 
 const ContactForm = () => {
   const initialValues = {
