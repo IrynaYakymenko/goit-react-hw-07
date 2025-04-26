@@ -1,0 +1,12 @@
+.search {
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+}
+
+.searchElem {
+  margin: 7px;
+}

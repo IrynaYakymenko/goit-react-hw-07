@@ -1,0 +1,40 @@
+ul {
+  list-style-type: none;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  margin: 20px;
+}
+p {
+  margin: 0px;
+}
+
+li {
+  display: flex;
+  width: calc((100% - 80px) / 4);
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 4px;
+  min-width: 250px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 7px;
+}
+
+button {
+  background-color: rgb(193, 238, 238);
+  margin: 10px;
+}

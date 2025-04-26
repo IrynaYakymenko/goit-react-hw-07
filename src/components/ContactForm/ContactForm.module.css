@@ -1,0 +1,26 @@
+.form {
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 350px;
+}
+
+.lable {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 7px;
+}
+
+.btn {
+  background-color: rgb(193, 238, 238);
+  margin: 10px;
+}
+
+.error {
+  color: red;
+}
